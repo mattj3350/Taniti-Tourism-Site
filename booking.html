@@ -1,0 +1,157 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Taniti - Booking</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="page" data-page="booking">
+    <header class="header">
+  <div class="container header-main">
+    <div class="header-row">
+      <div class="brand">
+        <div class="brand-logo">
+          <img src="assets/Taniti_fictional_flag.png" alt="Flag of Taniti">
+        </div>
+        <div>
+          <div class="brand-title">Taniti</div>
+          <div class="brand-subtitle">The most beautiful island in the Pacific</div>
+        </div>
+      </div>
+
+      <nav class="nav" aria-label="Primary">
+        <a class="nav-link" href="index.html">Home</a><a class="nav-link" href="attractions.html">Attractions</a><a class="nav-link active" href="booking.html">Booking</a><a class="nav-link" href="contact-us.html">Contact</a><a class="nav-link" href="about.html">FAQ</a>
+      </nav>
+
+      <div class="search" aria-label="Search">
+        <div class="search-wrap">
+          <input class="search-input" type="text" placeholder="Search...">
+          <span class="search-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><circle cx="11" cy="11" r="8"></circle><path d="m21 21-4.3-4.3"></path></svg></span>
+        </div>
+      </div>
+
+      <button class="mobile-btn" type="button" aria-label="Menu">
+        <span style="width:24px;height:24px;color:var(--text);display:inline-block"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 6h16"></path><path d="M4 12h16"></path><path d="M4 18h16"></path></svg></span>
+      </button>
+    </div>
+  </div>
+
+  <div class="subnav">
+    <div class="container">
+      <nav class="subnav-row" aria-label="Section shortcuts">
+        <a href="booking.html#booking-form">Booking Form</a>
+      </nav>
+    </div>
+  </div>
+</header>
+    <main class="container">
+  <section class="section card hero">
+    <div class="hero-grid">
+      <div>
+        <h1 class="hero-title">Book Your Stay</h1>
+        <p class="hero-text">Plan your visit to Taniti and enjoy a memorable experience on our beautiful island. Use the form below to schedule your stay and let us help you create unforgettable memories.</p>
+      </div>
+
+      <div class="hero-media">
+        <img src="assets/sasha-kaunas-TAgGZWz6Qg8-unsplash.jpg" alt="Beach Resort in Taniti">
+      </div>
+    </div>
+  </section>
+</main>
+<div class="card form-card">
+  <div class="prose">
+    <form id="booking-form" class="booking-form">
+      <h2 class="section-title">Booking Form</h2>
+      <p>Please fill out this form to schedule your stay on Taniti. Someone will be in touch with you regarding availabilities for your time window as soon as possible. We look forward to welcoming you to our beautiful island!</p>
+      <div class="form-grid">
+        <div class="form-group">
+          <label for="name">Name</label>
+          <input type="text" id="name" name="name" required>
+        </div>
+        <div class="form-group">
+          <label for="email">Email Address</label>
+          <input type="email" id="email" name="email" required>
+        </div>
+        <div class="form-group">
+          <label for="arrival">Arrival Date</label>
+          <input type="date" id="arrival" name="arrival" required min="2026-02-23">
+        </div>
+        <div class="form-group">
+          <label for="guests">Number of Guests</label>
+          <input type="number" id="guests" name="guests" min="1" required max="12">
+        </div>
+        <div class="form-group">
+          <label for="departure">Departure Date</label>
+          <input type="date" id="departure" name="departure" required min="2026-02-24">
+        </div>
+        <div class="form-group">
+          <label for="lodging">Lodging Type</label>
+          <select id="lodging" name="lodging" required>
+            <option value="">Select a lodging type</option>
+            <option value="standard">4 Star Resort</option>
+            <option value="deluxe">Inexpensive Hostel</option>
+            <option value="suite">Family Owned Hotels</option>
+            <option value="bed-breakfast">Bed & Breakfasts</option>
+          </select>
+        </div>
+        <button type="submit" class="btn-primary">
+          Submit Booking
+          <span style="width:16px;height:16px;display:inline-block"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"></path><path d="m12 5 7 7-7 7"></path></svg></span>
+        </button>
+      </div>
+    </form>
+  </div>
+</div>
+<div id="bookingSuccess" class="card" style="display:none; margin-top:16px;">
+  <div class="prose">
+    <div class="badge-row">
+      <div class="icon-badge green">✅</div>
+      <h2 class="card-title">Request received</h2>
+    </div>
+    <p>Thanks! We'll email you within 1 business day with availability and next steps!</p>
+  </div>
+</div>
+
+<div id="bookingError" class="card" style="display:none; margin-top:16px">
+  <div class="prose">
+    <div class="badge-row">
+      <div class="icon-badge teal">⚠️</div>
+      <h2 class="card-title">Check your information</h2>
+    </div>
+    <p id="bookingErrorText">There was an error with your booking. Please review your information and try again.</p>
+  </div>
+</div>
+<footer class="footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div>
+        <h3>About Us</h3>
+        <p>The team at Taniti is dedicated to providing an exceptional travel experience, ensuring every visitor enjoys the beauty and culture of our island.</p>
+      </div>
+
+      <div></div>
+
+      <div>
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="booking.html">Booking</a></li>
+          <li><a href="about.html">FAQ</a></li>
+        </ul>
+      </div>
+
+      <div>
+        <h3>&nbsp;</h3>
+        <ul>
+          <li><a href="attractions.html">Attractions</a></li>
+          <li><a href="contact-us.html">Contact Us</a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+  </div>
+</body>
+</html>
