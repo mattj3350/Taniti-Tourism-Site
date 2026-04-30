@@ -371,6 +371,7 @@ th{
 td strong{color:var(--primary);}
 td:first-child{font-weight:700;color:var(--primary);}
 
+.amenity-menu,
 .attraction-menu{
   display:flex;
   flex-wrap: wrap;
@@ -379,6 +380,7 @@ td:first-child{font-weight:700;color:var(--primary);}
   justify-content: center;
 }
 
+.amenity-menu a,
 .attraction-menu a{
   display: inline-flex;
   align-items: center;
@@ -393,12 +395,14 @@ td:first-child{font-weight:700;color:var(--primary);}
   transition: transform 160ms ease, box-shadow 160ms ease, border-color 160ms ease;
 }
 
+.amenity-menu a:hover,
 .attraction-menu a:hover{
   transform: translateY(-2px);
   border-color: rgba(0,0,0,0.16);
   box-shadow: 0 18px 48px rgba(0,0,0,0.14);
 }
 
+.amenity-menu a.focus-visible,
 .attraction-menu a.focus-visible{
   outline: 3px solid rgba(59,130,246,0.35);
   outline-offset: 3px;
